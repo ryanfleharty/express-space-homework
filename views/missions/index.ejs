@@ -8,6 +8,13 @@
 </head>
 <body>
     <h1>Homework</h1>
+
+        <ul class='missions'>
+        <% for (let i = 0; i < marsMissions.length; i++) {%>
+            <li><%= marsMissions[i].name %></li>
+            <% } %>
+            </ul>
+
     
 </body>
 </html>

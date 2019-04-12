@@ -41,12 +41,20 @@ const port = 3000;
 module.exports = app;
 
 app.get('/missions', (req, res) => {
-  res.render('missions/show.ejs', {
+  res.render('missions/index.ejs', {
     "marsMissions": marsMissions
+  })
+})
+
+app.get('/missions/:id', (req, res) =>{
+  const mission = marsMissions[req.params.id]
+  res.render('missions/show.ejs', {
+    "mission": mission
   })
 })
 
 // LISTENER
 app.listen(port, function() {
   console.log('Missions to Mars running on port: ', port);
-})
+});
+
