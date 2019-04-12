@@ -35,3 +35,5 @@ const marsMissions = [
         img: ""
     }
 ];
+
+module.exports = marsMissions;

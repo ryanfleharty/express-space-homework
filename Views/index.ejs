@@ -8,15 +8,11 @@
 </head>
 <body>
     <ul class='missions'>
-        <% for (let i=0; i<marsMissions.length; i++) {%>
-        <a href="/index/<%= i %>">
+        <% for (let i = 0; i< marsMissions.length; i++) {%>
             <li>
-        
                 <%= mission[i].name %>
             </li>
-        </a>
         <% } %>
-        
     </ul>
 </body>
 </html>
