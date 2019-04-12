@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <ul class="missions">
+      <% for (let i = 0; i < marsMissions.length; i++) { %>
+        <li><a href='localhost:3000/missions/<%=i%>'><%=marsMissions[i].name%></a></li>
+        <% } %>
+    </ul>
+
+    <!--EVEN THOUGH I THINK THIS HREF IS ACCURATE (when i do "open"
+    link in a new tab it works), IT DOESNT WORK WHEN CLICKED...WHY? -->
+
+  </body>
+</html>
