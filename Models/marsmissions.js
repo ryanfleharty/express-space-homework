@@ -1,4 +1,4 @@
-const marsMissions = [
+const marsmissions = [
     {
         name: "Curiosity",
         launchDate: "26 Nov 2011",
@@ -36,4 +36,4 @@ const marsMissions = [
     }
 ];
 
-module.exports = marsMissions;
+module.exports = marsmissions;
