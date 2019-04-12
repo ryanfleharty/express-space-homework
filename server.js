@@ -1,6 +1,8 @@
 // DEPENDENCIES
 const express = require('express');
+const marsMissiions = require('./models/marsMissions');
 const app = express();
+
 
 // run `npm install` to install dependencies in package.json
 
@@ -64,7 +66,18 @@ const marsMissions = [
 // send data to 'missions/index.ejs' view
 // the view should display just the names of each mission
 // display the mission names as <li> in a <ul> with the class name "missions"
+pp.get(`/missions`, (req,res)=>{
+  res.render('index.ejs', {
+    "marsMissions": marsMissions
+  })
 
+});
+
+app.get(`/missions/:id`, (req,res)=>{
+  res.render(`show.ejs`, {
+    "thisMission" : marsMissions[req.params.id]
+  })
+});
 // SHOW Route
 // send data to 'missions/show.ejs' view
 // the view should display all the data for a single mission
