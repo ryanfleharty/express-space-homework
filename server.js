@@ -66,15 +66,15 @@ const marsMissions = [
 // send data to 'missions/index.ejs' view
 // the view should display just the names of each mission
 // display the mission names as <li> in a <ul> with the class name "missions"
-app.get(`/missions`, (req,res)=>{
+app.get('/missions', (req,res)=>{
   res.render('index.ejs', {
     "marsMissions": marsMissions
   })
 
 });
 
-app.get(`/missions/:id`, (req,res)=>{
-  res.render(`show.ejs`, {
+app.get('/missions/:id', (req,res)=>{
+  res.render('show.ejs', {
     "thisMission" : marsMissions[req.params.id]
   })
 });
