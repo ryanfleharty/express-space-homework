@@ -3,15 +3,21 @@ const express = require('express');
 const marsMissions = require('./models/marsMission')
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('missions')
-})
 
-app.get('marsMissions', (req, res) => {
+app.get('/marsMissions', (req, res) => {
   res.render('index.ejs', {
     missions: marsMissions
   })
 })
+app.get('/index/:id', (req, res) => {
+   res.render('show.ejs', {
+     missions: marsMissions[req.params.id]
+   })
+  })
+
+  // res.render('show.ejs', {
+  // })
+
 
 // run `npm install` to install dependencies in package.json
 
