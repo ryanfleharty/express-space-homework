@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h1>Here is the page for the mission named: <%= myMission.name %></h1>
+    <ul class="mission-data">
+    <% for ( let key in myMission) { %>
+    <li class="keys"><%= `${key}: ` %><span class="datas"><%= myMission[key] %></span></li>
+    <% } %>
+    </ul>
+</body>
+</html>
