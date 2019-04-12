@@ -7,7 +7,7 @@
     <h1>Mission to Mars</h1>
         <ul class = 'missions'>
         <% for (let i = 0; i<missions.length;i++){ %>
-         <li> <%=missions[i].name; %> </li>
+         <li> <a href = '/missions/<%=i%>'> <%=missions[i].name; %> </li>
         <% } %>
         </ul>
     </body>

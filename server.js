@@ -38,8 +38,8 @@ app.get('/missions/', function (req,res){
   });
 });
 app.get('/missions/:index', function (req, res) {
-  res.render('show.ejs', { //second param must be an object
-  missions:marsMissions[req.params.index] //there will be a variable available inside the ejs file called fruit, its value is fruits[req.params.index]
+  res.render('show.ejs', { 
+  missions:marsMissions[req.params.index] 
   });
 });
 // SHOW Route
