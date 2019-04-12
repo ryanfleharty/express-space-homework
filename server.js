@@ -81,7 +81,7 @@ const port = 3000;
 // the view should display just the names of each mission
 // display the mission names as <li> in a <ul> with the class name "missions"
 
-app.get('/marsMissions', (req,res)=>{
+app.get('/missions', (req,res)=>{
   res.render('index.ejs', {
       "marsMissions" : marsMissions
   })
@@ -92,7 +92,7 @@ app.get('/marsMissions', (req,res)=>{
 // send data to 'missions/show.ejs' view
 // the view should display all the data for a single mission
 
-app.get('/marsMissions/:id', (req,res)=>{
+app.get('/missions/:id', (req,res)=>{
   res.render('show.ejs', {
       "marsMissionsId" : marsMissions[req.params.id]
   })

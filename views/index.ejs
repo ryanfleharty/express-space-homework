@@ -9,7 +9,7 @@
 <body>
     <ul class = "missions">
     <% for (let i = 0; i < marsMissions.length; i++){%>
-    <li><a href = "/marsMissions/<%= i %>"><%= marsMissions[i].name %></li>
+    <li><a href = "/marsMissions/<%=i%>"><%= marsMissions[i].name %></a></li>
     <% } %>
     </ul>
 </body>
