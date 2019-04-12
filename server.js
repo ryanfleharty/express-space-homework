@@ -9,7 +9,7 @@ const marsMissions = require('./models/marsMissions');
 // * The app will need routes for index and show
 
 // Show Route
-app.get('/marsMissions/:id', (req,res)=>{
+app.get('/missions/:id', (req,res)=>{
     const myMission = marsMissions[req.params.id];
     res.render('show.ejs', {
       "myMission": myMission
@@ -40,7 +40,7 @@ app.get("/", (request, response)=>{
 // send data to 'missions/index.ejs' view
 // the view should display just the names of each mission
 // display the mission names as <li> in a <ul> with the class name "missions"
-app.get('/marsMissions', (req,res)=>{
+app.get('/missions', (req,res)=>{
   res.render('index.ejs', {
     "myMissions": marsMissions 
   })
@@ -49,7 +49,7 @@ app.get('/marsMissions', (req,res)=>{
 // SHOW Route
 // send data to 'missions/show.ejs' view
 // the view should display all the data for a single mission
-app.get('/marsMissions/:id', (req,res)=>{
+app.get('/missions/:id', (req,res)=>{
   const myMission = marsMissions[req.params.id];
   res.render('show.ejs', {
     "myMission": myMission

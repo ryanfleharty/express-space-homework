@@ -8,5 +8,10 @@
 </head>
 <body>
     <h1>Here is the page for the mission named: <%= myMission.name %></h1>
+    <ul class="mission-data">
+    <% for ( let key in myMission) { %>
+    <li class="keys"><%= `${key}: ` %><span class="datas"><%= myMission[key] %></span></li>
+    <% } %>
+    </ul>
 </body>
 </html>
