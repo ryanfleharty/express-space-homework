@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1>Mars Missions</h1>
+        <ul class = 'missions'>
+        <% for (let i = 0; i< marsMissions.length;i++){ %>
+         <li> <a href = '/missions/<%=i%>'> <%=marsMissions[i].name; %> </li>
+        <% } %>
+        </ul>
+    </body>
+
+</body>
+</html> 
+
